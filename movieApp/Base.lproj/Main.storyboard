@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rc3-91-5vN">
-    <device id="retina6_0" orientation="portrait" appearance="dark"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="movieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iDX-Vo-kZq">
-                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="eX3-xI-ykr">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <connections>
@@ -29,14 +29,14 @@
                                 </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="150" id="flh-H8-yHE">
-                                        <rect key="frame" x="0.0" y="94" width="390" height="150"/>
+                                        <rect key="frame" x="0.0" y="94" width="393" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="flh-H8-yHE" id="ThG-EX-3js">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TENET" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wMs-ht-wyc">
-                                                    <rect key="frame" x="125" y="26" width="240" height="25.333333333333329"/>
+                                                    <rect key="frame" x="125" y="26" width="243" height="25.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -49,25 +49,25 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019 | Action, Adventure, Sci-Fi | 2h13m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ClQ-ph-MN6">
-                                                    <rect key="frame" x="125" y="61.333333333333336" width="240" height="19.333333333333336"/>
+                                                    <rect key="frame" x="125" y="61.333333333333336" width="243" height="19.333333333333336"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" systemColor="secondaryLabelColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6ny-KU-mMV">
-                                                    <rect key="frame" x="125" y="95.666666666666671" width="250" height="34.333333333333329"/>
+                                                    <rect key="frame" x="125" y="95.666666666666671" width="253" height="34.333333333333329"/>
                                                     <subviews>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa1-Tt-Iho">
-                                                            <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="34.333333333333336"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="77.666666666666671" height="34.333333333333336"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="34.329999999999998" id="wsY-e7-JR9"/>
                                                             </constraints>
                                                             <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="tinted" title="R"/>
+                                                            <buttonConfiguration key="configuration" style="tinted" title="PG-13"/>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWT-Ja-vBt">
-                                                            <rect key="frame" x="86.666666666666657" y="0.0" width="76.666666666666657" height="34.333333333333336"/>
+                                                            <rect key="frame" x="87.666666666666657" y="0.0" width="77.666666666666657" height="34.333333333333336"/>
                                                             <color key="tintColor" systemColor="systemRedColor"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="tinted" image="star.fill" catalog="system" title=" 75">
@@ -77,10 +77,10 @@
                                                             </buttonConfiguration>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DX7-oF-sYN">
-                                                            <rect key="frame" x="173.33333333333331" y="0.0" width="76.666666666666686" height="34.333333333333336"/>
+                                                            <rect key="frame" x="175.33333333333331" y="0.0" width="77.666666666666686" height="34.333333333333336"/>
                                                             <color key="tintColor" systemColor="systemYellowColor"/>
                                                             <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="tinted" image="person.fill" catalog="system" title=" 7.5">
+                                                            <buttonConfiguration key="configuration" style="tinted" image="popcorn.fill" catalog="system" title=" 7.5">
                                                                 <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
                                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                                 </preferredSymbolConfiguration>
@@ -131,39 +131,39 @@
             <objects>
                 <viewController id="h6P-QO-UO8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EcM-NG-eXn">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4j4-Zn-W0U">
-                                <rect key="frame" x="110" y="62" width="170" height="250"/>
+                                <rect key="frame" x="111.66666666666669" y="74" width="170" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="67c-Al-rv4"/>
                                     <constraint firstAttribute="width" constant="170" id="XNw-UU-tCM"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TENET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="XYG-T2-pQf">
-                                <rect key="frame" x="15" y="332" width="360" height="25.333333333333314"/>
+                                <rect key="frame" x="15" y="344" width="363" height="25.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019 | Action, Adventure | 2h13m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbh-aT-eaa">
-                                <rect key="frame" x="15" y="367.33333333333331" width="360" height="19.333333333333314"/>
+                                <rect key="frame" x="15" y="379.33333333333331" width="363" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vwk-kf-FKK">
-                                <rect key="frame" x="20" y="406.66666666666669" width="350" height="34.333333333333314"/>
+                                <rect key="frame" x="20" y="418.66666666666669" width="353" height="34.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bz1-Fw-N3k">
-                                        <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="34.333333333333336"/>
                                         <color key="tintColor" systemColor="secondaryLabelColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="R"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="PG-13"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHN-GU-sHW">
-                                        <rect key="frame" x="123.33333333333334" y="0.0" width="103.33333333333334" height="34.333333333333336"/>
+                                        <rect key="frame" x="124.33333333333334" y="0.0" width="104.33333333333334" height="34.333333333333336"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" image="star.fill" catalog="system" title=" 76">
@@ -173,10 +173,10 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWk-h0-YwG">
-                                        <rect key="frame" x="246.66666666666671" y="0.0" width="103.33333333333334" height="34.333333333333336"/>
+                                        <rect key="frame" x="248.66666666666671" y="0.0" width="104.33333333333334" height="34.333333333333336"/>
                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="person.fill" catalog="system" title=" 7.5">
+                                        <buttonConfiguration key="configuration" style="tinted" image="popcorn.fill" catalog="system" title=" 7.5">
                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                             </preferredSymbolConfiguration>
@@ -184,8 +184,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AKZ-Qe-pMy">
-                                <rect key="frame" x="15" y="461" width="360" height="321"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKZ-Qe-pMy">
+                                <rect key="frame" x="15" y="473" width="363" height="305"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -224,7 +224,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rc3-91-5vN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="x9h-6y-RCZ">
-                        <rect key="frame" x="0.0" y="47" width="390" height="96"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -238,7 +238,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="popcorn.fill" catalog="system" width="102" height="128"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
