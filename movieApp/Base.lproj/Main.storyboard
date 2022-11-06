@@ -11,7 +11,7 @@
         <!--Movies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="movieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomepageVC" customModule="movieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                     </connections>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="150" id="flh-H8-yHE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieCell" rowHeight="150" id="flh-H8-yHE" customClass="TableViewMovieCell" customModule="movieApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="94" width="393" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="flh-H8-yHE" id="ThG-EX-3js">
@@ -41,7 +41,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6aU-9N-WZ4">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poster" translatesAutoresizingMaskIntoConstraints="NO" id="6aU-9N-WZ4">
                                                     <rect key="frame" x="25" y="12.666666666666671" width="85" height="125.00000000000001"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="125" id="Auf-Nb-RVN"/>
@@ -59,14 +59,11 @@
                                                     <subviews>
                                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xa1-Tt-Iho">
                                                             <rect key="frame" x="0.0" y="0.0" width="77.666666666666671" height="34.333333333333336"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="34.329999999999998" id="wsY-e7-JR9"/>
-                                                            </constraints>
                                                             <color key="tintColor" systemColor="secondaryLabelColor"/>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="tinted" title="PG-13"/>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWT-Ja-vBt">
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWT-Ja-vBt">
                                                             <rect key="frame" x="87.666666666666657" y="0.0" width="77.666666666666657" height="34.333333333333336"/>
                                                             <color key="tintColor" systemColor="systemRedColor"/>
                                                             <state key="normal" title="Button"/>
@@ -76,7 +73,7 @@
                                                                 </preferredSymbolConfiguration>
                                                             </buttonConfiguration>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DX7-oF-sYN">
+                                                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DX7-oF-sYN">
                                                             <rect key="frame" x="175.33333333333331" y="0.0" width="77.666666666666686" height="34.333333333333336"/>
                                                             <color key="tintColor" systemColor="systemYellowColor"/>
                                                             <state key="normal" title="Button"/>
@@ -104,6 +101,14 @@
                                                 <constraint firstItem="wMs-ht-wyc" firstAttribute="top" secondItem="ThG-EX-3js" secondAttribute="topMargin" constant="15" id="nM6-0F-ipQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieCriticButton" destination="EWT-Ja-vBt" id="F4a-5N-hoB"/>
+                                            <outlet property="movieImageOutlet" destination="6aU-9N-WZ4" id="gPt-FI-gG8"/>
+                                            <outlet property="movieLabel" destination="wMs-ht-wyc" id="EEf-7r-6ga"/>
+                                            <outlet property="movieRatingButton" destination="xa1-Tt-Iho" id="BtL-4h-qio"/>
+                                            <outlet property="movieSublabel" destination="ClQ-ph-MN6" id="Yhv-lK-cam"/>
+                                            <outlet property="movieUserButton" destination="DX7-oF-sYN" id="vNq-By-M83"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -119,50 +124,52 @@
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="y1a-AM-hHo"/>
                     <connections>
-                        <segue destination="h6P-QO-UO8" kind="presentation" id="oKP-u3-nWc"/>
+                        <outlet property="moviesTableView" destination="iDX-Vo-kZq" id="qY3-oV-2Pf"/>
+                        <outlet property="searchBar" destination="eX3-xI-ykr" id="lxP-Ei-ZW1"/>
+                        <segue destination="h6P-QO-UO8" kind="presentation" identifier="toDetail" id="oKP-u3-nWc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1060" y="-28.436018957345969"/>
         </scene>
-        <!--View Controller-->
+        <!--DetailpageVC-->
         <scene sceneID="nei-GO-ghw">
             <objects>
-                <viewController id="h6P-QO-UO8" sceneMemberID="viewController">
+                <viewController id="h6P-QO-UO8" customClass="DetailpageVC" customModule="movieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EcM-NG-eXn">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4j4-Zn-W0U">
-                                <rect key="frame" x="111.66666666666669" y="74" width="170" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poster" translatesAutoresizingMaskIntoConstraints="NO" id="4j4-Zn-W0U">
+                                <rect key="frame" x="111.66666666666669" y="84" width="170" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="67c-Al-rv4"/>
                                     <constraint firstAttribute="width" constant="170" id="XNw-UU-tCM"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TENET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="XYG-T2-pQf">
-                                <rect key="frame" x="15" y="344" width="363" height="25.333333333333314"/>
+                                <rect key="frame" x="15" y="354" width="363" height="25.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019 | Action, Adventure | 2h13m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbh-aT-eaa">
-                                <rect key="frame" x="15" y="379.33333333333331" width="363" height="19.333333333333314"/>
+                                <rect key="frame" x="15" y="389.33333333333331" width="363" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vwk-kf-FKK">
-                                <rect key="frame" x="20" y="418.66666666666669" width="353" height="34.333333333333314"/>
+                                <rect key="frame" x="20" y="428.66666666666669" width="353" height="34.333333333333314"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bz1-Fw-N3k">
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bz1-Fw-N3k">
                                         <rect key="frame" x="0.0" y="0.0" width="104.33333333333333" height="34.333333333333336"/>
                                         <color key="tintColor" systemColor="secondaryLabelColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" title="PG-13"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHN-GU-sHW">
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHN-GU-sHW">
                                         <rect key="frame" x="124.33333333333334" y="0.0" width="104.33333333333334" height="34.333333333333336"/>
                                         <color key="tintColor" systemColor="systemRedColor"/>
                                         <state key="normal" title="Button"/>
@@ -172,7 +179,7 @@
                                             </preferredSymbolConfiguration>
                                         </buttonConfiguration>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWk-h0-YwG">
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWk-h0-YwG">
                                         <rect key="frame" x="248.66666666666671" y="0.0" width="104.33333333333334" height="34.333333333333336"/>
                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                         <state key="normal" title="Button"/>
@@ -185,11 +192,11 @@
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKZ-Qe-pMy">
-                                <rect key="frame" x="15" y="473" width="363" height="305"/>
+                                <rect key="frame" x="15" y="483" width="363" height="295"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <string key="text">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator</string>
                                 <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -205,7 +212,7 @@
                             <constraint firstItem="MqN-j0-EGy" firstAttribute="bottom" secondItem="AKZ-Qe-pMy" secondAttribute="bottom" constant="5" id="ce2-ZG-wmx"/>
                             <constraint firstItem="MqN-j0-EGy" firstAttribute="trailing" secondItem="Gbh-aT-eaa" secondAttribute="trailing" constant="15" id="ds2-fL-Tlo"/>
                             <constraint firstItem="Vwk-kf-FKK" firstAttribute="top" secondItem="Gbh-aT-eaa" secondAttribute="bottom" constant="20" id="fgO-ie-AoG"/>
-                            <constraint firstItem="4j4-Zn-W0U" firstAttribute="top" secondItem="MqN-j0-EGy" secondAttribute="top" constant="15" id="hzY-qg-05c"/>
+                            <constraint firstItem="4j4-Zn-W0U" firstAttribute="top" secondItem="MqN-j0-EGy" secondAttribute="top" constant="25" id="hzY-qg-05c"/>
                             <constraint firstItem="MqN-j0-EGy" firstAttribute="trailing" secondItem="AKZ-Qe-pMy" secondAttribute="trailing" constant="15" id="qJI-vA-F2a"/>
                             <constraint firstItem="AKZ-Qe-pMy" firstAttribute="leading" secondItem="MqN-j0-EGy" secondAttribute="leading" constant="15" id="sTk-mV-x7i"/>
                             <constraint firstAttribute="trailing" secondItem="XYG-T2-pQf" secondAttribute="trailing" constant="15" id="tiq-iE-Cdi"/>
@@ -213,6 +220,15 @@
                             <constraint firstItem="Gbh-aT-eaa" firstAttribute="leading" secondItem="MqN-j0-EGy" secondAttribute="leading" constant="15" id="xod-Ug-IzT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="movieCriticButton" destination="NHN-GU-sHW" id="UiC-V0-HQv"/>
+                        <outlet property="movieImageView" destination="4j4-Zn-W0U" id="joc-To-2CP"/>
+                        <outlet property="movieLabel" destination="XYG-T2-pQf" id="uFe-3D-9rx"/>
+                        <outlet property="moviePlotTextView" destination="AKZ-Qe-pMy" id="5e6-uj-ntg"/>
+                        <outlet property="movieRatingButton" destination="Bz1-Fw-N3k" id="Fug-CU-7L0"/>
+                        <outlet property="movieSublabel" destination="Gbh-aT-eaa" id="gBF-dX-ObL"/>
+                        <outlet property="movieUserButton" destination="SWk-h0-YwG" id="Okc-TN-Gd6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Mr-nf-sDL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,6 +255,7 @@
     </scenes>
     <resources>
         <image name="popcorn.fill" catalog="system" width="102" height="128"/>
+        <image name="poster" width="170" height="250"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

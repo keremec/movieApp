@@ -1,0 +1,47 @@
+//
+//  DetailpageVC.swift
+//  movieApp
+//
+//  Created by Kerem Safa Dirican on 6.11.2022.
+//
+
+import UIKit
+
+class DetailpageVC: UIViewController {
+    
+    //MARK: - Declarations
+    
+    weak var delegateDetail:HomepageVC?
+    
+    var movie:Movies?
+    
+    @IBOutlet weak var movieImageView: UIImageView!
+    
+    @IBOutlet weak var movieLabel: UILabel!
+    
+    @IBOutlet weak var movieSublabel: UILabel!
+    
+    @IBOutlet weak var movieRatingButton: UIButton!
+    
+    @IBOutlet weak var movieCriticButton: UIButton!
+    
+    @IBOutlet weak var movieUserButton: UIButton!
+    
+    @IBOutlet weak var moviePlotTextView: UITextView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //Style
+        movieImageView.layer.cornerRadius = 5.0
+        
+        //Data
+        movieLabel.text = movie?.title
+        movieSublabel.text = movie?.specs
+        movieRatingButton.setTitle(movie?.esrb, for: .normal)
+        movieCriticButton.setTitle(movie?.rating_critic, for: .normal)
+        movieUserButton.setTitle(movie?.rating_user, for: .normal)
+        moviePlotTextView.text = movie?.plot
+    }
+
+}
