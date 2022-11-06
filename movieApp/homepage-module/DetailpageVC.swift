@@ -36,7 +36,7 @@ class DetailpageVC: UIViewController {
         super.viewDidLoad()
         
         //Style
-        movieImageView.layer.cornerRadius = 5.0
+        movieImageView.layer.cornerRadius = 15.0
         
         //Data
         movieLabel.text = movie?.title

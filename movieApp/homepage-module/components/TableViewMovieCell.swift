@@ -26,7 +26,7 @@ class TableViewMovieCell: UITableViewCell {
         super.awakeFromNib()
         
         //Style
-        movieImageOutlet.layer.cornerRadius = 5.0
+        movieImageOutlet.layer.cornerRadius = 7.5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
