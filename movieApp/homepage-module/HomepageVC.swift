@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomepageVC: UIViewController {
     
@@ -81,6 +82,12 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
         cell.movieRatingButton.setTitle(movie.esrb, for: .normal)
         cell.movieCriticButton.setTitle(movie.rating_critic, for: .normal)
         cell.movieUserButton.setTitle(movie.rating_user, for: .normal)
+        if let url = URL(string: (movie.imgURL)!){
+            DispatchQueue.main.async {
+                cell.movieImageOutlet.kf.setImage(with: url, placeholder: UIImage(named: "no-poster"))
+            }
+        
+        }
         
         return cell
     }

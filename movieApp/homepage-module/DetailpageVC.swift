@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DetailpageVC: UIViewController {
     
@@ -44,6 +45,13 @@ class DetailpageVC: UIViewController {
         movieCriticButton.setTitle(movie?.rating_critic, for: .normal)
         movieUserButton.setTitle(movie?.rating_user, for: .normal)
         moviePlotTextView.text = movie?.plot
+        
+        if let url = URL(string: (movie?.imgURL)!){
+            DispatchQueue.main.async {
+                self.movieImageView.kf.setImage(with: url, placeholder: UIImage(named: "no-poster"))
+            }
+        
+        }
     }
 
 }
