@@ -29,6 +29,8 @@ class DetailpageVC: UIViewController {
     
     @IBOutlet weak var moviePlotTextView: UITextView!
     
+    //MARK: - Lifecycle Functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -7,8 +7,6 @@
 
 import UIKit
 
-//MARK: - ViewController
-
 class HomepageVC: UIViewController {
     
     //MARK: - Declarations
@@ -46,8 +44,6 @@ class HomepageVC: UIViewController {
             print("identifier not found")
         }
     }
-
-
 }
 
 
@@ -66,8 +62,7 @@ extension HomepageVC:PtoV_HomepageProtocol{
 }
 
 
-
-//MARK: - Filling the CollectionViews
+//MARK: - Tableview Actions
 
 extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
     
@@ -90,7 +85,7 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    //MARK: Adding Cell Click Action
+    //MARK: Cell - Click Action
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let movie = self.movieList[indexPath.row]
