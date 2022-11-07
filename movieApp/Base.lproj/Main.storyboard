@@ -112,20 +112,35 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="UX0-nG-WT9">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, you can search movies." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMk-Tq-5nV">
+                                <rect key="frame" x="67.666666666666657" y="416" width="257.66666666666674" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="placeholderTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="UX0-nG-WT9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="13P-zS-ead"/>
+                            <constraint firstItem="yMk-Tq-5nV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1mp-Q8-gNZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iDX-Vo-kZq" secondAttribute="trailing" id="LEQ-4Q-tvB"/>
                             <constraint firstItem="iDX-Vo-kZq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ljo-l0-p18"/>
+                            <constraint firstItem="yMk-Tq-5nV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NnT-UD-q05"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iDX-Vo-kZq" secondAttribute="bottom" id="qIl-6q-65A"/>
+                            <constraint firstItem="UX0-nG-WT9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t5z-nf-fST"/>
                             <constraint firstItem="iDX-Vo-kZq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vCz-fr-6r7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="y1a-AM-hHo"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="UX0-nG-WT9" id="72O-Rn-LfW"/>
                         <outlet property="moviesTableView" destination="iDX-Vo-kZq" id="qY3-oV-2Pf"/>
                         <outlet property="searchBar" destination="eX3-xI-ykr" id="lxP-Ei-ZW1"/>
+                        <outlet property="statusLabel" destination="yMk-Tq-5nV" id="SzT-63-7YL"/>
                         <segue destination="h6P-QO-UO8" kind="presentation" identifier="toDetail" id="oKP-u3-nWc"/>
                     </connections>
                 </viewController>
@@ -259,6 +274,9 @@
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

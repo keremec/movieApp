@@ -35,6 +35,7 @@ class HomepageInteractor:PtoI_HomepageProtocol{
                                     self.homepagePresenter?.movieSendtoPresenter(movieList: movieList)
                                     
                                 }catch{
+                                    self.homepagePresenter?.movieSendtoPresenter(movieList: movieList)
                                     print(error.localizedDescription)
                                 }
                             }
@@ -43,6 +44,7 @@ class HomepageInteractor:PtoI_HomepageProtocol{
                     }
                     
                 }catch{
+                    self.homepagePresenter?.movieSendtoPresenter(movieList: movieList)
                     print(error.localizedDescription)
                 }
             }

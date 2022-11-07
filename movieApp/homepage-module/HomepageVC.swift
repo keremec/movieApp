@@ -18,6 +18,11 @@ class HomepageVC: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    
     var movieList = [Movies]()
     
     //MARK: - Lifecycle Functions
@@ -31,6 +36,11 @@ class HomepageVC: UIViewController {
         moviesTableView.delegate = self
         moviesTableView.dataSource = self
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        activityIndicator.stopAnimating()
+        statusLabel.isHidden = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,6 +64,13 @@ extension HomepageVC:PtoV_HomepageProtocol{
     
     func movieSendtoView(movieList: Array<Movies>) {
         self.movieList = movieList
+        
+        activityIndicator.stopAnimating()
+        
+        if(movieList.count) < 1{
+            statusLabel.text = "No Result"
+            statusLabel.isHidden = false
+        }
         
         DispatchQueue.main.async {
             self.moviesTableView.reloadData()
@@ -111,6 +128,10 @@ extension HomepageVC: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         movieList.removeAll()
         self.moviesTableView.reloadData()
+        
+        statusLabel.isHidden = true
+        activityIndicator.startAnimating()
+        
         homepagePresenterObject?.doSearchMovie(searchString: searchBar.text!)
         self.view.endEditing(true)
     }
