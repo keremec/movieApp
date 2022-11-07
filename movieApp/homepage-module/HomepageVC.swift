@@ -109,20 +109,17 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
-    //MARK: Cell - Click Action
+    //MARK: Cell Click Action
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let movie = self.movieList[indexPath.row]
         performSegue(withIdentifier: "toDetail", sender: movie)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    
 }
 
 
-
-//MARK: Searchbar Action
+//MARK: - Searchbar Action
 
 extension HomepageVC: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -137,3 +134,5 @@ extension HomepageVC: UISearchBarDelegate{
     }
     
 }
+
+//MARK: -

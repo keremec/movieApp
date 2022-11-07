@@ -18,7 +18,7 @@ class HomepageInteractor:PtoI_HomepageProtocol{
         
         var movieList = [Movies]()
         let encodedString = searchString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        //MARK: Searching Movies
+        //MARK: - Searching Movies
         
         AF.request("https://www.omdbapi.com/?s=\(encodedString!)&type=movie&apikey=\(API_KEY)",method: .get).response { response in
             if let data = response.data {
@@ -51,7 +51,7 @@ class HomepageInteractor:PtoI_HomepageProtocol{
         }
     }
     
-//Helper Functions
+// MARK: - Helper Functions
     
     func subLabelGenerator(year:String, genre:String, runtime:String) -> String {
         let duration = Int(runtime.dropLast(4)) ?? 0
