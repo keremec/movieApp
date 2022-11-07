@@ -27,10 +27,10 @@ class HomepageVC: UIViewController {
         
         HomepageRouter.createModule(ref: self)
         
+        searchBar.delegate = self
         moviesTableView.delegate = self
         moviesTableView.dataSource = self
         
-        homepagePresenterObject?.doSearchMovie(searchString: "a")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -100,5 +100,19 @@ extension HomepageVC: UITableViewDelegate, UITableViewDataSource{
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    
+}
+
+
+
+//MARK: Searchbar Action
+
+extension HomepageVC: UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        movieList.removeAll()
+        self.moviesTableView.reloadData()
+        homepagePresenterObject?.doSearchMovie(searchString: searchBar.text!)
+        self.view.endEditing(true)
+    }
     
 }
